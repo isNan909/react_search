@@ -3,6 +3,8 @@ import SearchBar from "./components/SearchBar";
 import Card from "./components/Card";
 import MovieSource from "./api/MovieSource";
 
+// http://www.omdbapi.com/?i=tt3896198&apikey=821d565d&s=superman
+
 function App() {
   const [state, setState] = useState({
     typing: "",

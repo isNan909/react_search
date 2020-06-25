@@ -1,9 +1,9 @@
 import React from "react";
 
-function Searchbar(handleInput, search) {
+function Searchbar({ handleInput, search }) {
   return (
     <div>
-      <div className="control">
+      <div className="control"> 
         <input
           className="input"
           onChange={handleInput}

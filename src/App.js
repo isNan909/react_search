@@ -12,6 +12,7 @@ function App() {
   const search = (e) => {
     if (e.key === "Enter") {
       const data = MovieSource.get("&s=" + state.typing);
+      debugger
       setState((prevState) => {
         return { ...prevState, movies: data };
       });

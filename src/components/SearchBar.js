@@ -1,10 +1,16 @@
 import React from "react";
 
-function Searchbar() {
+function Searchbar(handleInput, search) {
   return (
     <div>
       <div className="control">
-        <input className="input" type="text" placeholder="Search your movies" />
+        <input
+          className="input"
+          onChange={handleInput}
+          onKeyPress={search}
+          type="text"
+          placeholder="Search your movies"
+        />
       </div>
     </div>
   );

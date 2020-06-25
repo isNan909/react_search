@@ -5,7 +5,6 @@ import SearchBar from "./components/SearchBar";
 
 import MovieSource from "./api/MovieSource";
 
-
 function App() {
 
   const [movies, setMovies] = useState(null)

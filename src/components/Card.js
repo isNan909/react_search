@@ -1,10 +1,9 @@
 import React from "react";
 
-function Card(props) {
+function Card(results) {
   return (
     <div>
       <div className="card">
-        {props.result}
         <div className="card-image">
           <figure className="image is-4by3">
             {/* <img src={results.image} alt="" /> */}

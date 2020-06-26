@@ -12,7 +12,7 @@ function App() {
   const search = (e) => {
     if (e.key === "Enter") {
       const data = MovieSource.get(state.typing);
-      console.log(data);
+      console.log(data.data.Search);
       setState((prevState) => {
         return { ...prevState, movies: data };
       });
@@ -30,7 +30,7 @@ function App() {
     <div className="App">
       <div className="container searchApp">
         <h2 className="title is-2 has-text-centered">
-          React Search with Context API and Hooks
+          React Search with Hooks
         </h2>
         <SearchBar handleInput={handleInput} search={search} />
         <Card results={state.movies} />

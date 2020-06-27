@@ -1,14 +1,6 @@
 import React from "react";
 
-function Card({ results }) {
-	console.log(results.data)
-  return (
-    <div className="result">
-      {/* {results.map((result) => (
-        <div key={result.imdbID}>{results}</div>
-      ))} */}
-    </div>
-  );
+export default function Card(props) {
+  const { movie } = props;
+  return <div>{movie.imdbID}</div>;
 }
-
-export default Card;

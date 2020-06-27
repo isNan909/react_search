@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Card from "./components/Card";
+import CardList from "./components/CardList";
 import SearchBar from "./components/SearchBar";
 
 import MovieSource from "./api/MovieSource";
@@ -14,6 +14,7 @@ function App() {
     const results = await MovieSource.get("/", {
       params: { s: text, i: "tt3896198", apiKey: "821d565d" },
     });
+
     setState(prevState => {
       return { ...prevState, results: results }
     })
@@ -26,7 +27,7 @@ function App() {
           React Search with Context API and Hooks
         </h2>
         <SearchBar onSearch={onSearch} />
-        <Card results={state.results} />
+        <CardList results={state.results} />
       </div>
     </div>
   );

@@ -7,10 +7,10 @@ export default function Card(props) {
       <figure className="image is-48x48">
         <img
           src={movie.Poster}
-          alt=""
+          alt= {movie.Title}
         />
       </figure>
-      <h6>{movie.Title}</h6>
+      <h4 class="bolder">{movie.Title}</h4>
       <span><b>Year:</b>{movie.Year}</span>
     </div>
   );

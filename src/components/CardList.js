@@ -1,13 +1,17 @@
 import React from "react";
-// import Card from './Card'
+import Card from "./Card";
 
 function CardList({ results }) {
-  console.log(results.data);
+  let data = [];
+  if (results.data) {
+    data = results.data.Search || [];
+  }
+  console.log(data);
   return (
     <div className="result">
-      {/* {dataProps.map((result) => (
-        <Card key={result.data.Search.imdbID} movie={results.data.Search}>
-      ))} */}
+      {data.map((item) => (
+        <Card key={item.imdbID} movie={item} />
+      ))}
     </div>
   );
 }
